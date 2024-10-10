@@ -1,5 +1,5 @@
  class LinkedList {
-     private static Node head;
+     private  Node head;
 
      public LinkedList() {
          head = null;
@@ -27,17 +27,17 @@
      }
 
 
-     public static void appendList(LinkedList L) {
+     public  void appendList(LinkedList L) {
          if (L.head == null) return;
-         Node currNode = head;
+         Node currNode = L.head;
          while (currNode != null) {
              int data = currNode.data;
-             sorted_insert(data);
+             this.sorted_insert(data);
              currNode = currNode.next;
          }
      }
 
-     public static void append(int target) {
+     public  void append(int target) {
          Node lastNode = head;
          Node currNode = head;
          Node targetNode = null;
@@ -57,7 +57,7 @@
      }
 
 
-     public static void sorted_insert(int num) {
+     public  void sorted_insert(int num) {
          Node newNode = new Node(num);
          Node currNode = head;
          Node prevNode = head;
@@ -89,7 +89,7 @@
      }
 
 
-     public static void printList() {
+     public  void printList() {
          Node currNode = head;
          while (currNode != null) {
              System.out.print(currNode.data + " -> ");
